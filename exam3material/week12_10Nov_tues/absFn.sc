@@ -30,6 +30,7 @@ val x: Z = -4
 
 //use function to get absolute value of x
 //what *should* the absolute value be?
-
+val answer: Z = absVal(x)
 
 //what should we be able to assert?
+assert()
