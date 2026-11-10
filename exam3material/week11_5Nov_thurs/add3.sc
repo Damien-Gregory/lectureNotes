@@ -18,11 +18,22 @@ val orig: Z = x
 
 x = x + 1
 
+Deduce ( 
+    1 ( Old(x) > 0 ) by Premise,
+)
+
 
 //what can we put in a proof block here?
 //what should we be able to assert about x and orig?
 
 x = x + 2
+
+Deduce ( 
+    1 ( x == Old(x) + 2 ) by Premise,
+    2 ( Old(x) == orig + 1 ) by Premise,
+    3 ( x == orig + 3 ) by Algebra*(1, 2),
+    4 ( )
+)
 
 
 //what can we put in a proof block here?
@@ -30,7 +41,8 @@ x = x + 2
 
 
 //what do we want to assert? How has x changed?
-
+assert (x == orig + 3)
+assert (x > 3)
 
 
 //Once it is working - if x was originally positive,
